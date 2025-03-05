@@ -12,15 +12,19 @@ async def root():
 @app.get("/teste1")
 async def funcaoteste():
     return {"message": "função de teste 1"}
-
+  
+# http://127.0.0.1:8000/outros
+@app.get("/outros")
+async def outros():
+    return {"message": "outros"}
+=======
 
 # http://127.0.0.1:8000/outrospontos
 @app.get("/outrospontos")
-async def funcaoteste():
+async def outrospontos():
     return {"message": "outrospontos"}
 =======
 # http://127.0.0.1:8000/randnum
 @app.get("/randnum")
-async def funcaoteste2():
+async def randnum():
     return {"message": True, "Numero Random": random.randint(0, 1000)}
-
