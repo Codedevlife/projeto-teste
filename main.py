@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import random
 
 app = FastAPI()
 
@@ -11,3 +12,8 @@ async def root():
 @app.get("/teste1")
 async def funcaoteste():
     return {"message": "função de teste 1"}
+
+# http://127.0.0.1:8000/randnum
+@app.get("/randnum")
+async def funcaoteste():
+    return {"message": True, "Numero Random": random.randint(0, 1000)};
